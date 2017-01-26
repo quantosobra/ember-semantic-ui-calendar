@@ -67,7 +67,7 @@
   "ember-addon": {
     "configPath": "tests/dummy/config",
     "versionCompatibility": {
-      "ember": ""
+      "ember": ">=2.3.0 <3.0.0"
     },
     "demoURL": "http://quantosobra.github.io/ember-semantic-ui-calendar"
   }
