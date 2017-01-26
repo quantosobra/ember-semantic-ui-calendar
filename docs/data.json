@@ -1,0 +1,73 @@
+{
+    "project": {
+        "name": "ember-semantic-ui-calendar",
+        "description": "Semantic UI Calendar component for Ember.",
+        "url": "http://github.com/quantosobra/ember-semantic-ui-calendar",
+        "version": "v0.0.1"
+    },
+    "files": {
+        "addon/components/ui-calendar.js": {
+            "name": "addon/components/ui-calendar.js",
+            "modules": {},
+            "classes": {
+                "Semantic.UiCalendar": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Semantic": 1
+            }
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Semantic.UiCalendar": {
+            "name": "Semantic.UiCalendar",
+            "shortname": "Semantic.UiCalendar",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "namespace": "Semantic",
+            "file": "addon/components/ui-calendar.js",
+            "line": 7,
+            "extends": "Ember.Component",
+            "see": [
+                "https://github.com/mdehoog/Semantic-UI-Calendar"
+            ]
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "addon/components/ui-calendar.js",
+            "line": 19,
+            "description": "Name of an icon to display in the input. You can pass `false` to not show an icon.",
+            "itemtype": "property",
+            "name": "icon",
+            "type": "String|Boolean",
+            "default": "'calendar'",
+            "access": "public",
+            "tagname": "",
+            "see": [
+                "http://semantic-ui.com/elements/icon.html"
+            ],
+            "class": "Semantic.UiCalendar",
+            "namespace": "Semantic"
+        },
+        {
+            "file": "addon/components/ui-calendar.js",
+            "line": 30,
+            "description": "Placeholder for the input.",
+            "itemtype": "property",
+            "name": "placeholder",
+            "type": "String",
+            "default": "''",
+            "access": "public",
+            "tagname": "",
+            "class": "Semantic.UiCalendar",
+            "namespace": "Semantic"
+        }
+    ],
+    "warnings": []
+}
