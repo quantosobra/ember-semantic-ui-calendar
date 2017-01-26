@@ -1,0 +1,56 @@
+<div class="ui segments" id="example-date-and-time">
+  <div class="ui segment">
+    <h3 class="ui header">Date & Time</h3>
+  </div>
+  <div class="ui segment">
+    {{! BEGIN-SNIPPET date-and-time }}
+    {{ui-calendar date=date onChange=(action (mut date)) placeholder="Select date and time"}}
+    {{! END-SNIPPET date-and-time }}
+  </div>
+  <div class="ui segment">
+    {{code-snippet name="date-and-time.hbs"}}
+  </div>
+</div>
+
+<div class="ui segments" id="example-date-only">
+  <div class="ui segment">
+    <h3 class="ui header">Date only</h3>
+  </div>
+  <div class="ui segment">
+    {{! BEGIN-SNIPPET date-only }}
+    {{ui-calendar type="date" date=date onChange=(action (mut date)) placeholder="Select date"}}
+    {{! END-SNIPPET date-only }}
+  </div>
+  <div class="ui segment">
+    {{code-snippet name="date-only.hbs"}}
+  </div>
+</div>
+
+<div class="ui segments" id="example-time-only">
+  <div class="ui segment">
+    <h3 class="ui header">Time only</h3>
+  </div>
+  <div class="ui segment">
+    {{! BEGIN-SNIPPET time-only }}
+    {{ui-calendar type="time" icon="time" date=date onChange=(action (mut date)) placeholder="Select time"}}
+    {{! END-SNIPPET time-only }}
+  </div>
+  <div class="ui segment">
+    {{code-snippet name="time-only.hbs"}}
+  </div>
+</div>
+
+<div class="ui segments" id="example-range">
+  <div class="ui segment">
+    <h3 class="ui header">Range</h3>
+  </div>
+  <div class="ui segment">
+    {{! BEGIN-SNIPPET range }}
+    {{ui-calendar type="date" endDate=endDate date=startDate onChange=(action (mut startDate)) placeholder="Start date"}}
+    {{ui-calendar type="date" startDate=startDate date=endDate onChange=(action (mut endDate)) placeholder="End date"}}
+    {{! END-SNIPPET time-only }}
+  </div>
+  <div class="ui segment">
+    {{code-snippet name="range.hbs"}}
+  </div>
+</div>

@@ -1,0 +1,1 @@
+export { default } from 'ember-semantic-ui-calendar/components/ui-calendar';

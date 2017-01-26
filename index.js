@@ -1,6 +1,38 @@
 /* jshint node: true */
 'use strict';
 
+const path = require('path');
+const merge = require('lodash.merge');
+
+let defaults = {
+  import: {
+    css: true,
+    javascript: true
+  },
+  source: {
+    css: 'bower_components/semantic-ui-calendar/dist',
+    javascript: 'bower_components/semantic-ui-calendar/dist'
+  }
+};
+
 module.exports = {
-  name: 'ember-semantic-ui-calendar'
+  name: 'ember-semantic-ui-calendar',
+
+  included: function (app) {
+    let options = merge({}, defaults, app.options['ember-semantic-ui-calendar']);
+
+    if (options.import.css) {
+      app.import({
+        development: path.join(options.source.css, 'calendar.css'),
+        production: path.join(options.source.css, 'calendar.min.css')
+      });
+    }
+
+    if (options.import.javascript) {
+      app.import({
+        development: path.join(options.source.javascript, 'calendar.js'),
+        production: path.join(options.source.javascript, 'calendar.min.js')
+      });
+    }
+  }
 };
