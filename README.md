@@ -1,27 +1,30 @@
 # ember-semantic-ui-calendar
 
-This README outlines the details of collaborating on this Ember addon.
+[![Build Status](https://travis-ci.org/quantosobra/ember-semantic-ui-calendar.svg)](https://travis-ci.org/quantosobra/ember-semantic-ui-calendar)
+[![npm version](https://badge.fury.io/js/ember-semantic-ui-calendar.svg)](http://badge.fury.io/js/ember-semantic-ui-calendar)
+[![Code Climate](https://codeclimate.com/github/quantosobra/ember-semantic-ui-calendar/badges/gpa.svg)](https://codeclimate.com/github/quantosobra/ember-semantic-ui-calendar)
+[![Test Coverage](https://codeclimate.com/github/quantosobra/ember-semantic-ui-calendar/badges/coverage.svg)](https://codeclimate.com/github/quantosobra/ember-semantic-ui-calendar/coverage)
+[![Dependency Status](https://david-dm.org/quantosobra/ember-semantic-ui-calendar.svg)](https://david-dm.org/quantosobra/ember-semantic-ui-calendar)
+
+## Features
+
+This addon integrates [Semantic UI Calendar](https://github.com/mdehoog/Semantic-UI-Calendar) into Ember.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-semantic-ui-calendar`
-* `npm install`
-* `bower install`
+```
+ember install ember-semantic-ui-calendar
+```
 
-## Running
+## Helpful Links
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+- ### [Live Demo](http://quantosobra.github.io/ember-semantic-ui-calendar)
 
-## Running Tests
+- ### [Changelog](CHANGELOG.md)
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+## Looking for help?
 
-## Building
+If it is a bug [please open an issue on GitHub](https://github.com/quantosobra/ember-semantic-ui-calendar/issues).
 
-* `ember build`
+## Usage
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
