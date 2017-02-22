@@ -1,6 +1,6 @@
 {
   "name": "ember-semantic-ui-calendar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Semantic UI Calendar component for Ember.",
   "keywords": [
     "ember-addon",
