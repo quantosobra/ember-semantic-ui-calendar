@@ -25,7 +25,8 @@
   },
   "dependencies": {
     "ember-cli-babel": "^5.1.7",
-    "ember-cli-htmlbars": "1.1.1"
+    "ember-cli-htmlbars": "1.1.1",
+    "lodash.merge": "^4.6.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -55,7 +56,6 @@
     "ember-resolver": "^2.0.3",
     "ember-suave": "4.0.1",
     "loader.js": "^4.0.10",
-    "lodash.merge": "^4.6.0",
     "semantic-ui-ember": "^2.0.1"
   },
   "peerDependencies": {
