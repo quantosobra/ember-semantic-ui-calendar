@@ -3,6 +3,7 @@
 /dist
 /tests
 /tmp
+/nbproject
 **/.gitkeep
 .bowerrc
 .editorconfig
