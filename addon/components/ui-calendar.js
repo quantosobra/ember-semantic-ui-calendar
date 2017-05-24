@@ -2,7 +2,7 @@ import Ember from 'ember';
 import Base from 'semantic-ui-ember/mixins/base';
 import layout from '../templates/components/ui-calendar';
 
-const { Component } = Ember;
+const { Component, computed, isEmpty } = Ember;
 
 /**
  * @class UiCalendar
@@ -36,6 +36,64 @@ export default Component.extend(Base, {
    * @public
    */
   placeholder: '',
+
+  /**
+   * If the user can clear the value using a clear button inside the input.
+   *
+   * @property allowClear
+   * @type Boolean
+   * @default false
+   * @public
+   */
+  allowClear: false,
+
+  /**
+   * Name of the icon to use as a button the clear the input value.
+   *
+   * @property clearIcon
+   * @type String
+   * @default 'clear'
+   * @public
+   */
+  clearIcon: 'remove',
+
+  /**
+   * @property showClearButton
+   * @type Boolean
+   * @private
+   */
+  showClearButton: computed('date', 'allowClear', function() {
+    let { date, allowClear } = this.getProperties('date', 'allowClear');
+    let showClearButton = (allowClear && !isEmpty(date));
+    return showClearButton;
+  }),
+
+  /**
+   * Class names used in .ui.input element to configure icon visibility.
+   *
+   * @property inputIconsClassNames
+   * @type String
+   * @private
+   */
+  inputIconsClassNames: computed('icon', 'showClearButton', function() {
+    let { icon, showClearButton } = this.getProperties('icon', 'showClearButton');
+    let hasLeftIcon = !isEmpty(icon) && icon !== false;
+    let classNames = [];
+
+    if (hasLeftIcon) {
+      classNames.push('left');
+    }
+
+    if (showClearButton) {
+      classNames.push('right');
+    }
+
+    if (hasLeftIcon || showClearButton) {
+      classNames.push('icon');
+    }
+
+    return classNames.join(' ');
+  }),
 
   getSemanticIgnorableAttrs() {
     return ['icon', 'placeholder'];

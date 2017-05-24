@@ -10,3 +10,7 @@
 .ui.vertical.menu {
   text-align: right;
 }
+
+.ui.secondary.segment > .hljs {
+  background-color: transparent;
+}

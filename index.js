@@ -26,6 +26,11 @@ module.exports = {
         development: path.join(options.source.css, 'calendar.css'),
         production: path.join(options.source.css, 'calendar.min.css')
       });
+
+      app.import({
+        development: 'vendor/ember-semantic-ui-calendar.css',
+        production: 'vendor/ember-semantic-ui-calendar.min.css'
+      });
     }
 
     if (options.import.javascript) {

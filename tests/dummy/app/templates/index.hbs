@@ -7,7 +7,7 @@
     {{ui-calendar date=date onChange=(action (mut date)) placeholder="Select date and time"}}
     {{! END-SNIPPET date-and-time }}
   </div>
-  <div class="ui segment">
+  <div class="ui secondary segment">
     {{code-snippet name="date-and-time.hbs"}}
   </div>
 </div>
@@ -21,7 +21,7 @@
     {{ui-calendar type="date" date=date onChange=(action (mut date)) placeholder="Select date"}}
     {{! END-SNIPPET date-only }}
   </div>
-  <div class="ui segment">
+  <div class="ui secondary segment">
     {{code-snippet name="date-only.hbs"}}
   </div>
 </div>
@@ -35,7 +35,7 @@
     {{ui-calendar type="time" icon="time" date=date onChange=(action (mut date)) placeholder="Select time"}}
     {{! END-SNIPPET time-only }}
   </div>
-  <div class="ui segment">
+  <div class="ui secondary segment">
     {{code-snippet name="time-only.hbs"}}
   </div>
 </div>
@@ -48,9 +48,31 @@
     {{! BEGIN-SNIPPET range }}
     {{ui-calendar type="date" endDate=endDate date=startDate onChange=(action (mut startDate)) placeholder="Start date"}}
     {{ui-calendar type="date" startDate=startDate date=endDate onChange=(action (mut endDate)) placeholder="End date"}}
-    {{! END-SNIPPET time-only }}
+    {{! END-SNIPPET range }}
+  </div>
+  <div class="ui secondary segment">
+    {{code-snippet name="range.hbs"}}
+  </div>
+</div>
+
+<div class="ui segments" id="example-clear-button">
+  <div class="ui segment">
+    <h3 class="ui header">Clear button</h3>
   </div>
   <div class="ui segment">
-    {{code-snippet name="range.hbs"}}
+    {{! BEGIN-SNIPPET clear-button }}
+    {{ui-calendar date=date onChange=(action (mut date)) allowClear=true placeholder="Select date and time"}}
+    {{! END-SNIPPET clear-button }}
+  </div>
+  <div class="ui secondary segment">
+    {{code-snippet name="clear-button.hbs"}}
+  </div>
+  <div class="ui segment">
+    {{! BEGIN-SNIPPET custom-clear-button }}
+    {{ui-calendar date=date onChange=(action (mut date)) allowClear=true clearIcon="ban" placeholder="Select date and time"}}
+    {{! END-SNIPPET custom-clear-button }}
+  </div>
+  <div class="ui secondary segment">
+    {{code-snippet name="custom-clear-button.hbs"}}
   </div>
 </div>
