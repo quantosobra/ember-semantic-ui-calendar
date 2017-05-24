@@ -3,7 +3,7 @@
         "name": "ember-semantic-ui-calendar",
         "description": "Semantic UI Calendar component for Ember.",
         "url": "http://github.com/quantosobra/ember-semantic-ui-calendar",
-        "version": "v0.0.3"
+        "version": "v0.1.0"
     },
     "files": {
         "addon/components/ui-calendar.js": {
@@ -64,6 +64,55 @@
             "type": "String",
             "default": "''",
             "access": "public",
+            "tagname": "",
+            "class": "Semantic.UiCalendar",
+            "namespace": "Semantic"
+        },
+        {
+            "file": "addon/components/ui-calendar.js",
+            "line": 40,
+            "description": "If the user can clear the value using a clear button inside the input.",
+            "itemtype": "property",
+            "name": "allowClear",
+            "type": "Boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "Semantic.UiCalendar",
+            "namespace": "Semantic"
+        },
+        {
+            "file": "addon/components/ui-calendar.js",
+            "line": 50,
+            "description": "Name of the icon to use as a button the clear the input value.",
+            "itemtype": "property",
+            "name": "clearIcon",
+            "type": "String",
+            "default": "'clear'",
+            "access": "public",
+            "tagname": "",
+            "class": "Semantic.UiCalendar",
+            "namespace": "Semantic"
+        },
+        {
+            "file": "addon/components/ui-calendar.js",
+            "line": 60,
+            "itemtype": "property",
+            "name": "showClearButton",
+            "type": "Boolean",
+            "access": "private",
+            "tagname": "",
+            "class": "Semantic.UiCalendar",
+            "namespace": "Semantic"
+        },
+        {
+            "file": "addon/components/ui-calendar.js",
+            "line": 71,
+            "description": "Class names used in .ui.input element to configure icon visibility.",
+            "itemtype": "property",
+            "name": "inputIconsClassNames",
+            "type": "String",
+            "access": "private",
             "tagname": "",
             "class": "Semantic.UiCalendar",
             "namespace": "Semantic"
