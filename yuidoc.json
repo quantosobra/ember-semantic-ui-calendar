@@ -4,6 +4,7 @@
   "url": "http://github.com/quantosobra/ember-semantic-ui-calendar",
   "options": {
     "enabledEnvironments": ["production"],
+    "themedir" : "node_modules/yuidoc-theme-quantosobra",
     "paths": [
       "app",
       "addon"
