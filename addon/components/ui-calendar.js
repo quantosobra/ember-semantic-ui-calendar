@@ -95,6 +95,30 @@ export default Component.extend(Base, {
     return classNames.join(' ');
   }),
 
+  /**
+   * Action executed when the user presses the `enter` key when the input is focused.
+   *
+   * @event onEnter
+   * @param {Event} event
+   */
+  onEnter: null,
+
+  /**
+   * Action executed when the user presses the `escape` key when the input is focused.
+   *
+   * @event onEscape
+   * @param {Event} event
+   */
+  onEscape: null,
+
+  /**
+   * Action executed when the user presses the any key when the input is focused.
+   *
+   * @event onKeyDown
+   * @param {Event} event
+   */
+  onKeyDown: null,
+
   getSemanticIgnorableAttrs() {
     return ['icon', 'placeholder'];
   },
@@ -105,6 +129,21 @@ export default Component.extend(Base, {
     let date = this.get('date');
     if (date) {
       this.$().calendar('set date', date);
+    }
+  },
+
+  actions: {
+    onInputKeyDown(value, event) {
+      this.sendAction('onKeyDown', event);
+
+      switch (event.keyCode) {
+        case 13:
+          this.sendAction('onEnter', event);
+          break;
+        case 27:
+          this.sendAction('onEscape', event);
+          break;
+      }
     }
   }
 });

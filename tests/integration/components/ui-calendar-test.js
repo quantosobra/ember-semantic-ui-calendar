@@ -1,4 +1,5 @@
 import { moduleForComponent, test } from 'ember-qunit';
+import { keyEvent } from 'ember-native-dom-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 moduleForComponent('ui-calendar', 'Integration | Component | ui calendar', {
@@ -130,4 +131,36 @@ test('it clears the input value when clear button is clicked', function(assert) 
   assert.ok(this.get('date'), 'Selected date is empty');
   this.$('.ui.calendar .input > .remove.icon').trigger('click');
   assert.notOk(this.get('date'), 'Selected date is empty');
+});
+
+test('it triggers actions on keyboard events - onEnter', function(assert) {
+  assert.expect(2);
+
+  this.set('onEnter', (event) => assert.ok(event));
+  this.set('onKeyDown', (event) => assert.ok(event));
+
+  this.render(hbs`{{ui-calendar onEnter=onEnter onKeyDown=onKeyDown}}`);
+
+  keyEvent('input', 'keydown', 13);
+});
+
+test('it triggers actions on keyboard events - onEscape', function(assert) {
+  assert.expect(2);
+
+  this.set('onEscape', (event) => assert.ok(event));
+  this.set('onKeyDown', (event) => assert.ok(event));
+
+  this.render(hbs`{{ui-calendar onEscape=onEscape onKeyDown=onKeyDown}}`);
+
+  keyEvent('input', 'keydown', 27);
+});
+
+test('it triggers actions on keyboard events - onKeyDown', function(assert) {
+  assert.expect(1);
+
+  this.set('onKeyDown', (event) => assert.ok(event));
+
+  this.render(hbs`{{ui-calendar onKeyDown=onKeyDown}}`);
+
+  keyEvent('input', 'keydown', 32);
 });

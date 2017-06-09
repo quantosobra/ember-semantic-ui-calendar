@@ -2,7 +2,7 @@
   {{#if icon}}
     <i class="left {{icon}} icon"></i>
   {{/if}}
-  <input type="text" placeholder="{{placeholder}}" />
+  {{input type="text" placeholder=placeholder key-down=(action "onInputKeyDown")}}
   {{#if showClearButton}}
     <i class="right {{clearIcon}} link icon" {{action "execute" "clear"}}></i>
   {{/if}}
