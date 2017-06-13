@@ -1,0 +1,111 @@
+<div class="ui segments">
+  <div class="ui orange inverted segment">
+    <h3 class="ui header">Moment.js required</h3>
+  </div>
+  <div class="ui segment">
+    This addon does NOT include ember-moment. To use the examples in this page
+    in your application, you will need to install ember-moment yourself.
+  </div>
+  <div class="ui secondary segment">
+    <pre class="hljs">ember install ember-moment</pre>
+  </div>
+</div>
+
+<div class="ui segments">
+  <div class="ui segment">
+    <h3 class="ui header">Extend default component</h3>
+  </div>
+  <div class="ui segment">
+    To use moment with ember-semantic-ui-calendar, you should extend the
+    ui-calendar component class and add moment specific code inside the new
+    component (you can use the same component name if you want).
+  </div>
+  <div class="ui secondary segment">
+    {{code-snippet name="components-ui-calendar-moment.js"}}
+  </div>
+</div>
+
+<div class="ui segments">
+  <div class="ui segment">
+    <h3 class="ui header">Binding to moment</h3>
+  </div>
+  <div class="ui segment">
+    By default, the ui-calendar component only accepts Date objects as value.
+    You can change this to accept a moment object, and trigger the onChange
+    action with the selected date as a moment value.
+  </div>
+  <div class="ui secondary segment">
+    {{code-snippet name="components-ui-calendar-moment-binding.js"}}
+  </div>
+</div>
+
+<div class="ui segments">
+  <div class="ui segment">
+    <h3 class="ui header">Support for localization</h3>
+  </div>
+  <div class="ui segment">
+    You can also use moment to add localization support to
+    ember-semantic-ui-calendar.
+  </div>
+  <div class="ui secondary segment">
+    {{code-snippet name="components-ui-calendar-moment-locale.js"}}
+  </div>
+</div>
+
+<div class="ui segments">
+  <div class="ui segment">
+    <h3 class="ui header">Controls</h3>
+  </div>
+  <div class="ui segment">
+    <p>All examples below use the same date object.</p>
+    <p>Current value is: {{date}}</p>
+    <p><button class="ui button" {{action "resetDate"}}>Set to now</button></p>
+    <p>
+      Change locale
+      <button class="ui button" {{action "changeLocale" "pt-br"}}>PT-BR</button>
+      <button class="ui button" {{action "changeLocale" "en"}}>EN</button>
+    </p>
+  </div>
+</div>
+
+<div class="ui segments" id="example-date-and-time">
+  <div class="ui segment">
+    <h3 class="ui header">Date & Time</h3>
+  </div>
+  <div class="ui segment">
+    {{! BEGIN-SNIPPET moment-date-and-time }}
+    {{ui-calendar-moment momentValue=date onChange=(action (mut date)) placeholder="Select date and time"}}
+    {{! END-SNIPPET moment-date-and-time }}
+  </div>
+  <div class="ui secondary segment">
+    {{code-snippet name="moment-date-and-time.hbs"}}
+  </div>
+</div>
+
+<div class="ui segments" id="example-date-only">
+  <div class="ui segment">
+    <h3 class="ui header">Date only</h3>
+  </div>
+  <div class="ui segment">
+    {{! BEGIN-SNIPPET moment-date-only }}
+    {{ui-calendar-moment type="date" momentValue=date onChange=(action (mut date)) placeholder="Select date"}}
+    {{! END-SNIPPET moment-date-only }}
+  </div>
+  <div class="ui secondary segment">
+    {{code-snippet name="moment-date-only.hbs"}}
+  </div>
+</div>
+
+<div class="ui segments" id="example-time-only">
+  <div class="ui segment">
+    <h3 class="ui header">Time only</h3>
+  </div>
+  <div class="ui segment">
+    {{! BEGIN-SNIPPET moment-time-only }}
+    {{ui-calendar-moment type="time" icon="time" momentValue=date onChange=(action (mut date)) placeholder="Select time"}}
+    {{! END-SNIPPET moment-time-only }}
+  </div>
+  <div class="ui secondary segment">
+    {{code-snippet name="moment-time-only.hbs"}}
+  </div>
+</div>

@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('moment-examples');
   this.route('clear-button-examples');
   this.route('range-examples');
 });

@@ -15,6 +15,7 @@ export default Component.extend(Base, {
 
   module: 'calendar',
   classNames: ['ui', 'calendar'],
+  ignorableAttrs: ['date', 'icon', 'placeholder'],
 
   /**
    * Name of an icon to display in the input. You can pass `false` to not show an icon.
@@ -119,10 +120,6 @@ export default Component.extend(Base, {
    */
   onKeyDown: null,
 
-  getSemanticIgnorableAttrs() {
-    return ['icon', 'placeholder'];
-  },
-
   didInitSemantic() {
     this._super(...arguments);
 
@@ -130,6 +127,11 @@ export default Component.extend(Base, {
     if (date) {
       this.$().calendar('set date', date);
     }
+  },
+
+  didUpdateAttrs() {
+    this._super(...arguments);
+    this.execute('set date', this.get('date'), true, false);
   },
 
   actions: {
