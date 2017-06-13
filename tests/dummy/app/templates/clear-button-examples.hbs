@@ -1,0 +1,29 @@
+{{controls-segment date=date reset=(action "resetDate")}}
+
+<div class="ui segments">
+  <div class="ui segment">
+    <h3 class="ui header">Clear button</h3>
+  </div>
+  <div class="ui segment">
+    {{! BEGIN-SNIPPET clear-button }}
+    {{ui-calendar date=date onChange=(action (mut date)) allowClear=true placeholder="Select date and time"}}
+    {{! END-SNIPPET clear-button }}
+  </div>
+  <div class="ui secondary segment">
+    {{code-snippet name="clear-button.hbs"}}
+  </div>
+</div>
+
+<div class="ui segments">
+  <div class="ui segment">
+    <h3 class="ui header">Clear button with custom icon</h3>
+  </div>
+  <div class="ui segment">
+    {{! BEGIN-SNIPPET custom-clear-button }}
+    {{ui-calendar date=date onChange=(action (mut date)) allowClear=true clearIcon="ban" placeholder="Select date and time"}}
+    {{! END-SNIPPET custom-clear-button }}
+  </div>
+  <div class="ui secondary segment">
+    {{code-snippet name="custom-clear-button.hbs"}}
+  </div>
+</div>

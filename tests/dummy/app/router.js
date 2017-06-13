@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('clear-button-examples');
+  this.route('range-examples');
 });
 
 export default Router;

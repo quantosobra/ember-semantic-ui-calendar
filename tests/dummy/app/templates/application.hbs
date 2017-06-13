@@ -1,18 +1,29 @@
-<div class="ui main container">
-  <h1 class="ui header">Ember SemanticUI Calendar examples</h1>
-
-  <div>
-    <div class="ui left dividing rail">
-      {{#ui-sticky}}
-        <ul class="ui fluid vertical text menu">
-          <a class="item" href="#example-date-and-time">Date & Time</a>
-          <a class="item" href="#example-date-only">Date only</a>
-          <a class="item" href="#example-time-only">Time only</a>
-          <a class="item" href="#example-range">Range</a>
-          <a class="item" href="#example-clear-button">Clear button</a>
-        </ul>
-      {{/ui-sticky}}
-    </div>
-    {{outlet}}
+<div class="ui fixed red inverted huge menu">
+  <div class="header item">
+    <img src="ember-logo.svg" class="ui image">
+    Semantic UI Calendar
   </div>
+
+  {{#link-to "index" class="item"}}Basic Examples{{/link-to}}
+  {{#ui-dropdown class="item"}}
+    <div>Customization</div>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      {{#link-to "range-examples" class="item"}}Range{{/link-to}}
+      {{#link-to "clear-button-examples" class="item"}}Clear button{{/link-to}}
+    </div>
+  {{/ui-dropdown}}
+
+  <div class="right menu">
+    <a class="item" href="https://quantosobra.github.io/ember-semantic-ui-calendar/docs/">
+      <i class="book icon"></i> API Documentation
+    </a>
+    <a class="icon item" href="https://github.com/quantosobra/ember-semantic-ui-calendar/">
+      <i class="github icon"></i>
+    </a>
+  </div>
+</div>
+
+<div class="ui main container">
+  {{outlet}}
 </div>

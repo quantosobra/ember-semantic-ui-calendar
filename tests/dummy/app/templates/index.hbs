@@ -1,3 +1,5 @@
+{{controls-segment date=date reset=(action "resetDate")}}
+
 <div class="ui segments" id="example-date-and-time">
   <div class="ui segment">
     <h3 class="ui header">Date & Time</h3>
@@ -37,42 +39,5 @@
   </div>
   <div class="ui secondary segment">
     {{code-snippet name="time-only.hbs"}}
-  </div>
-</div>
-
-<div class="ui segments" id="example-range">
-  <div class="ui segment">
-    <h3 class="ui header">Range</h3>
-  </div>
-  <div class="ui segment">
-    {{! BEGIN-SNIPPET range }}
-    {{ui-calendar type="date" endDate=endDate date=startDate onChange=(action (mut startDate)) placeholder="Start date"}}
-    {{ui-calendar type="date" startDate=startDate date=endDate onChange=(action (mut endDate)) placeholder="End date"}}
-    {{! END-SNIPPET range }}
-  </div>
-  <div class="ui secondary segment">
-    {{code-snippet name="range.hbs"}}
-  </div>
-</div>
-
-<div class="ui segments" id="example-clear-button">
-  <div class="ui segment">
-    <h3 class="ui header">Clear button</h3>
-  </div>
-  <div class="ui segment">
-    {{! BEGIN-SNIPPET clear-button }}
-    {{ui-calendar date=date onChange=(action (mut date)) allowClear=true placeholder="Select date and time"}}
-    {{! END-SNIPPET clear-button }}
-  </div>
-  <div class="ui secondary segment">
-    {{code-snippet name="clear-button.hbs"}}
-  </div>
-  <div class="ui segment">
-    {{! BEGIN-SNIPPET custom-clear-button }}
-    {{ui-calendar date=date onChange=(action (mut date)) allowClear=true clearIcon="ban" placeholder="Select date and time"}}
-    {{! END-SNIPPET custom-clear-button }}
-  </div>
-  <div class="ui secondary segment">
-    {{code-snippet name="custom-clear-button.hbs"}}
   </div>
 </div>

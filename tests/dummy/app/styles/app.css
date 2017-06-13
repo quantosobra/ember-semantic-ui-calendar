@@ -1,4 +1,18 @@
+.ui.red.inverted.menu {
+  background-color: #dd6a58;
+}
+
+.ui.red.inverted.menu .header.item {
+  padding: 6px 12px;
+}
+
+.ui.red.inverted.menu .header.item img.ui.image {
+  height: 30px;
+  margin-right: 5px;
+}
+
 .ui.main.container {
+  margin-top: 64px;
   padding: 32px 0;
   position: relative;
 }
