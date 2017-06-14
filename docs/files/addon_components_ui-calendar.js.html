@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-calendar</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.1.0
+        API Docs for: v0.2.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -90,6 +90,7 @@
               
                 module: &#x27;calendar&#x27;,
                 classNames: [&#x27;ui&#x27;, &#x27;calendar&#x27;],
+                ignorableAttrs: [&#x27;date&#x27;, &#x27;icon&#x27;, &#x27;placeholder&#x27;],
               
                 /**
                  * Name of an icon to display in the input. You can pass &#x60;false&#x60; to not show an icon.
@@ -170,9 +171,43 @@
                   return classNames.join(&#x27; &#x27;);
                 }),
               
-                getSemanticIgnorableAttrs() {
-                  return [&#x27;icon&#x27;, &#x27;placeholder&#x27;];
-                },
+                /**
+                 * Action executed when the user presses the &#x60;enter&#x60; key when the input is focused.
+                 *
+                 * @event onEnter
+                 * @param {Event} event
+                 */
+                onEnter: null,
+              
+                /**
+                 * Action executed when the user presses the &#x60;escape&#x60; key when the input is focused.
+                 *
+                 * @event onEscape
+                 * @param {Event} event
+                 */
+                onEscape: null,
+              
+                /**
+                 * Action executed when the user presses the any key when the input is focused.
+                 *
+                 * @event onKeyDown
+                 * @param {Event} event
+                 */
+                onKeyDown: null,
+              
+                /**
+                 * Action executed when the date input is focused.
+                 *
+                 * @event onFocusOut
+                 */
+                onFocusIn: null,
+              
+                /**
+                 * Action executed when the date input looses focus.
+                 *
+                 * @event onFocusOut
+                 */
+                onFocusOut: null,
               
                 didInitSemantic() {
                   this._super(...arguments);
@@ -180,6 +215,26 @@
                   let date = this.get(&#x27;date&#x27;);
                   if (date) {
                     this.$().calendar(&#x27;set date&#x27;, date);
+                  }
+                },
+              
+                didUpdateAttrs() {
+                  this._super(...arguments);
+                  this.execute(&#x27;set date&#x27;, this.get(&#x27;date&#x27;), true, false);
+                },
+              
+                actions: {
+                  onInputKeyDown(value, event) {
+                    this.sendAction(&#x27;onKeyDown&#x27;, event);
+              
+                    switch (event.keyCode) {
+                      case 13:
+                        this.sendAction(&#x27;onEnter&#x27;, event);
+                        break;
+                      case 27:
+                        this.sendAction(&#x27;onEscape&#x27;, event);
+                        break;
+                    }
                   }
                 }
               });

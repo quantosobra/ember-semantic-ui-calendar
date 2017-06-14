@@ -3,7 +3,7 @@
         "name": "ember-semantic-ui-calendar",
         "description": "Semantic UI Calendar component for Ember.",
         "url": "http://github.com/quantosobra/ember-semantic-ui-calendar",
-        "version": "v0.1.0"
+        "version": "v0.2.0"
     },
     "files": {
         "addon/components/ui-calendar.js": {
@@ -41,7 +41,7 @@
     "classitems": [
         {
             "file": "addon/components/ui-calendar.js",
-            "line": 19,
+            "line": 20,
             "description": "Name of an icon to display in the input. You can pass `false` to not show an icon.",
             "itemtype": "property",
             "name": "icon",
@@ -57,7 +57,7 @@
         },
         {
             "file": "addon/components/ui-calendar.js",
-            "line": 30,
+            "line": 31,
             "description": "Placeholder for the input.",
             "itemtype": "property",
             "name": "placeholder",
@@ -70,7 +70,7 @@
         },
         {
             "file": "addon/components/ui-calendar.js",
-            "line": 40,
+            "line": 41,
             "description": "If the user can clear the value using a clear button inside the input.",
             "itemtype": "property",
             "name": "allowClear",
@@ -83,7 +83,7 @@
         },
         {
             "file": "addon/components/ui-calendar.js",
-            "line": 50,
+            "line": 51,
             "description": "Name of the icon to use as a button the clear the input value.",
             "itemtype": "property",
             "name": "clearIcon",
@@ -96,7 +96,7 @@
         },
         {
             "file": "addon/components/ui-calendar.js",
-            "line": 60,
+            "line": 61,
             "itemtype": "property",
             "name": "showClearButton",
             "type": "Boolean",
@@ -107,13 +107,79 @@
         },
         {
             "file": "addon/components/ui-calendar.js",
-            "line": 71,
+            "line": 72,
             "description": "Class names used in .ui.input element to configure icon visibility.",
             "itemtype": "property",
             "name": "inputIconsClassNames",
             "type": "String",
             "access": "private",
             "tagname": "",
+            "class": "Semantic.UiCalendar",
+            "namespace": "Semantic"
+        },
+        {
+            "file": "addon/components/ui-calendar.js",
+            "line": 99,
+            "description": "Action executed when the user presses the `enter` key when the input is focused.",
+            "itemtype": "event",
+            "name": "onEnter",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "",
+                    "type": "Event"
+                }
+            ],
+            "class": "Semantic.UiCalendar",
+            "namespace": "Semantic"
+        },
+        {
+            "file": "addon/components/ui-calendar.js",
+            "line": 107,
+            "description": "Action executed when the user presses the `escape` key when the input is focused.",
+            "itemtype": "event",
+            "name": "onEscape",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "",
+                    "type": "Event"
+                }
+            ],
+            "class": "Semantic.UiCalendar",
+            "namespace": "Semantic"
+        },
+        {
+            "file": "addon/components/ui-calendar.js",
+            "line": 115,
+            "description": "Action executed when the user presses the any key when the input is focused.",
+            "itemtype": "event",
+            "name": "onKeyDown",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "",
+                    "type": "Event"
+                }
+            ],
+            "class": "Semantic.UiCalendar",
+            "namespace": "Semantic"
+        },
+        {
+            "file": "addon/components/ui-calendar.js",
+            "line": 123,
+            "description": "Action executed when the date input is focused.",
+            "itemtype": "event",
+            "name": "onFocusOut",
+            "class": "Semantic.UiCalendar",
+            "namespace": "Semantic"
+        },
+        {
+            "file": "addon/components/ui-calendar.js",
+            "line": 130,
+            "description": "Action executed when the date input looses focus.",
+            "itemtype": "event",
+            "name": "onFocusOut",
             "class": "Semantic.UiCalendar",
             "namespace": "Semantic"
         }
