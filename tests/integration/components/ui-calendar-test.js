@@ -1,5 +1,5 @@
 import { moduleForComponent, test } from 'ember-qunit';
-import { keyEvent } from 'ember-native-dom-helpers';
+import { keyEvent, focus, blur } from 'ember-native-dom-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 moduleForComponent('ui-calendar', 'Integration | Component | ui calendar', {
@@ -163,4 +163,25 @@ test('it triggers actions on keyboard events - onKeyDown', function(assert) {
   this.render(hbs`{{ui-calendar onKeyDown=onKeyDown}}`);
 
   keyEvent('input', 'keydown', 32);
+});
+
+test('it triggers input events - onFocusIn', function(assert) {
+  assert.expect(1);
+
+  this.on('focusIn', () => assert.ok(true));
+
+  this.render(hbs`{{ui-calendar onFocusIn=(action "focusIn")}}`);
+
+  focus('input');
+});
+
+test('it triggers input events - onFocusOut', function(assert) {
+  assert.expect(1);
+
+  this.on('focusOut', () => assert.ok(true));
+
+  this.render(hbs`{{ui-calendar onFocusOut=(action "focusOut")}}`);
+
+  focus('input');
+  blur('input');
 });

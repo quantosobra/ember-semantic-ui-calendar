@@ -120,6 +120,20 @@ export default Component.extend(Base, {
    */
   onKeyDown: null,
 
+  /**
+   * Action executed when the date input is focused.
+   *
+   * @event onFocusOut
+   */
+  onFocusIn: null,
+
+  /**
+   * Action executed when the date input looses focus.
+   *
+   * @event onFocusOut
+   */
+  onFocusOut: null,
+
   didInitSemantic() {
     this._super(...arguments);
 
