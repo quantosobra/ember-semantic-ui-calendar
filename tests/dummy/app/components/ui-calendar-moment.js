@@ -1,9 +1,10 @@
 // BEGIN-SNIPPET components-ui-calendar-moment
-import Ember from 'ember';
+import { inject as service } from '@ember/service';
+
+import { computed } from '@ember/object';
+import { merge } from '@ember/polyfills';
 import moment from 'moment';
 import UiCalendarComponent from 'ember-semantic-ui-calendar/components/ui-calendar';
-
-const { computed, inject, merge } = Ember;
 
 const UiCalendarMoment = UiCalendarComponent.extend({
   // See below
@@ -38,7 +39,7 @@ UiCalendarMoment.reopen({
 
 // BEGIN-SNIPPET components-ui-calendar-moment-locale
 UiCalendarMoment.reopen({
-  moment: inject.service('moment'),
+  moment: service('moment'),
 
   init() {
     this._super(...arguments);

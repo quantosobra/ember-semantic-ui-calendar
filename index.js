@@ -1,4 +1,3 @@
-/* jshint node: true */
 'use strict';
 
 const path = require('path');
@@ -10,8 +9,8 @@ let defaults = {
     javascript: true
   },
   source: {
-    css: 'bower_components/semantic-ui-calendar/dist',
-    javascript: 'bower_components/semantic-ui-calendar/dist'
+    css: 'node_modules/semantic-ui-calendar/dist',
+    javascript: 'node_modules/semantic-ui-calendar/dist'
   }
 };
 

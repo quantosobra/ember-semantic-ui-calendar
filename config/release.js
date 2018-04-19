@@ -1,4 +1,4 @@
-/* jshint node:true */
+/* eslint-disable no-console */
 var execSync = require('child_process').execSync;
 
 // For details on each option run `ember help release`
