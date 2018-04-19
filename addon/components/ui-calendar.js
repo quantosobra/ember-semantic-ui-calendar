@@ -1,8 +1,8 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { computed } from '@ember/object';
+import { isEmpty } from '@ember/utils';
 import Base from 'semantic-ui-ember/mixins/base';
 import layout from '../templates/components/ui-calendar';
-
-const { Component, computed, isEmpty } = Ember;
 
 /**
  * @class UiCalendar
