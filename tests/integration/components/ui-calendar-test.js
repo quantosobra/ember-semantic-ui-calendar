@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render, find, findAll, triggerEvent } from '@ember/test-helpers';
-import { keyEvent, focus, blur } from 'ember-native-dom-helpers';
+import { render, find, findAll, click, triggerKeyEvent } from '@ember/test-helpers';
+import { focus, blur } from 'ember-native-dom-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | ui calendar', function(hooks) {
@@ -149,7 +149,7 @@ module('Integration | Component | ui calendar', function(hooks) {
 
     await render(hbs`{{ui-calendar onEnter=onEnter onKeyDown=onKeyDown}}`);
 
-    keyEvent('input', 'keydown', 13);
+    triggerKeyEvent('input', 'keydown', 13);
   });
 
   test('it triggers actions on keyboard events - onEscape', async function(assert) {
@@ -160,7 +160,7 @@ module('Integration | Component | ui calendar', function(hooks) {
 
     await render(hbs`{{ui-calendar onEscape=onEscape onKeyDown=onKeyDown}}`);
 
-    keyEvent('input', 'keydown', 27);
+    triggerKeyEvent('input', 'keydown', 27);
   });
 
   test('it triggers actions on keyboard events - onKeyDown', async function(assert) {
@@ -170,7 +170,7 @@ module('Integration | Component | ui calendar', function(hooks) {
 
     await render(hbs`{{ui-calendar onKeyDown=onKeyDown}}`);
 
-    keyEvent('input', 'keydown', 32);
+    triggerKeyEvent('input', 'keydown', 32);
   });
 
   test('it triggers input events - onFocusIn', async function(assert) {
