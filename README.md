@@ -4,7 +4,6 @@
 [![npm version](https://badge.fury.io/js/ember-semantic-ui-calendar.svg)](http://badge.fury.io/js/ember-semantic-ui-calendar)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-semantic-ui-calendar.svg)](http://emberobserver.com/addons/ember-semantic-ui-calendar)
 [![Code Climate](https://codeclimate.com/github/quantosobra/ember-semantic-ui-calendar/badges/gpa.svg)](https://codeclimate.com/github/quantosobra/ember-semantic-ui-calendar)
-[![Test Coverage](https://codeclimate.com/github/quantosobra/ember-semantic-ui-calendar/badges/coverage.svg)](https://codeclimate.com/github/quantosobra/ember-semantic-ui-calendar/coverage)
 [![Dependency Status](https://david-dm.org/quantosobra/ember-semantic-ui-calendar.svg)](https://david-dm.org/quantosobra/ember-semantic-ui-calendar)
 
 ## Features
