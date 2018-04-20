@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0 (2018-04-20)
+
+* [[#11](https://github.com/quantosobra/ember-semantic-ui-calendar/pull/11)] Update Semantic UI
+
 ## 0.2.0 (2017-06-14)
 
 * [[#6](https://github.com/quantosobra/ember-semantic-ui-calendar/pull/6)] Add support for keyboard events
