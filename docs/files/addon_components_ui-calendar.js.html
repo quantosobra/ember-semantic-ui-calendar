@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-calendar</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.2.0
+        API Docs for: v1.0.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -73,11 +73,11 @@
               
               <div class="file">
                 <pre class="code prettyprint linenums">
-                  import Ember from &#x27;ember&#x27;;
+                  import Component from &#x27;@ember/component&#x27;;
+              import { computed } from &#x27;@ember/object&#x27;;
+              import { isEmpty } from &#x27;@ember/utils&#x27;;
               import Base from &#x27;semantic-ui-ember/mixins/base&#x27;;
               import layout from &#x27;../templates/components/ui-calendar&#x27;;
-              
-              const { Component, computed, isEmpty } = Ember;
               
               /**
                * @class UiCalendar
