@@ -28,7 +28,8 @@
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1",
-    "lodash.merge": "^4.6.0"
+    "lodash.merge": "^4.6.0",
+    "semantic-ui-calendar": "^0.0.8"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -62,12 +63,10 @@
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-node": "^6.0.1",
     "loader.js": "^4.2.3",
-    "semantic-ui-calendar": "^0.0.8",
     "semantic-ui-ember": "^3.0.0",
     "yuidoc-theme-quantosobra": "github:quantosobra/yuidoc-theme-quantosobra"
   },
   "peerDependencies": {
-    "semantic-ui-calendar": "^0.0.8",
     "semantic-ui-ember": "^3.0.0"
   },
   "engines": {
