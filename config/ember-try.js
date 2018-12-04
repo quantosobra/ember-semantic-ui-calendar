@@ -11,14 +11,6 @@ module.exports = function() {
     return {
       scenarios: [
         {
-          name: 'ember-lts-2.12',
-          npm: {
-            devDependencies: {
-              'ember-source': '~2.12.0'
-            }
-          }
-        },
-        {
           name: 'ember-lts-2.16',
           npm: {
             devDependencies: {
@@ -31,6 +23,14 @@ module.exports = function() {
           npm: {
             devDependencies: {
               'ember-source': '~2.18.0'
+            }
+          }
+        },
+        {
+          name: 'ember-lts-3.4',
+          npm: {
+            devDependencies: {
+              'ember-source': '~3.4.0'
             }
           }
         },
@@ -56,12 +56,6 @@ module.exports = function() {
             devDependencies: {
               'ember-source': urls[2]
             }
-          }
-        },
-        {
-          name: 'ember-default',
-          npm: {
-            devDependencies: {}
           }
         }
       ]

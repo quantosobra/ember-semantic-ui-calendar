@@ -20,7 +20,13 @@
   </div>
   <div class="ui segment">
     {{! BEGIN-SNIPPET custom-clear-button }}
-    {{ui-calendar date=date onChange=(action (mut date)) allowClear=true clearIcon="ban" placeholder="Select date and time"}}
+    {{ui-calendar
+      date=date
+      onChange=(action (mut date))
+      allowClear=true
+      clearIcon="ban"
+      placeholder="Select date and time"
+    }}
     {{! END-SNIPPET custom-clear-button }}
   </div>
   <div class="ui secondary segment">
