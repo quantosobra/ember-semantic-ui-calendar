@@ -124,7 +124,8 @@ export default Component.extend(Base, {
   /**
    * Action executed when the date input is focused.
    *
-   * @event onFocusOut
+   * @event onFocusIn
+   * @param {Event} event
    */
   onFocusIn: null,
 
@@ -132,6 +133,7 @@ export default Component.extend(Base, {
    * Action executed when the date input looses focus.
    *
    * @event onFocusOut
+   * @param {Event} event
    */
   onFocusOut: null,
 
