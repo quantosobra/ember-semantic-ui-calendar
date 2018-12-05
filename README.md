@@ -30,6 +30,15 @@ If it is a bug [please open an issue on GitHub](https://github.com/quantosobra/e
 
 You can see usage examples in the [demo page](http://quantosobra.github.io/ember-semantic-ui-calendar).
 
+## Development
+
+To release and publish a new version, use the commands:
+
+```
+ember release (--major|--minor|--patch)
+yarn publish
+```
+
 ## License
 
 This project is developed at [QuantoSobra](https://www.quantosobra.com.br) and licensed under the MIT license.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.0 (2018-12-05)
+
+* [[#7](https://github.com/quantosobra/ember-semantic-ui-calendar/pull/17)] Update Ember CLI
+
 ## 1.0.0 (2018-04-20)
 
 * [[#11](https://github.com/quantosobra/ember-semantic-ui-calendar/pull/11)] Update Semantic UI
