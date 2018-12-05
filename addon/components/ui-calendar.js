@@ -2,6 +2,7 @@ import Component from '@ember/component';
 import { computed } from '@ember/object';
 import { isEmpty } from '@ember/utils';
 import Base from 'semantic-ui-ember/mixins/base';
+import { invokeAction } from 'ember-invoke-action';
 import layout from '../templates/components/ui-calendar';
 
 /**
@@ -149,15 +150,23 @@ export default Component.extend(Base, {
   },
 
   actions: {
-    onInputKeyDown(value, event) {
-      this.sendAction('onKeyDown', event);
+    handleInputFocus(event) {
+      invokeAction(this, 'onFocusIn', event);
+    },
+
+    handleInputBlur(event) {
+      invokeAction(this, 'onFocusOut', event);
+    },
+
+    handleInputKeyDown(event) {
+      invokeAction(this, 'onKeyDown', event);
 
       switch (event.keyCode) {
         case 13:
-          this.sendAction('onEnter', event);
+          invokeAction(this, 'onEnter', event);
           break;
         case 27:
-          this.sendAction('onEscape', event);
+          invokeAction(this, 'onEscape', event);
           break;
       }
     }
