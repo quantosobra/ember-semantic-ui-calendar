@@ -15,7 +15,7 @@ let defaults = {
 };
 
 module.exports = {
-  name: 'ember-semantic-ui-calendar',
+  name: require('./package').name,
 
   included: function (app) {
     let options = merge({}, defaults, app.options['ember-semantic-ui-calendar']);

@@ -4,19 +4,31 @@
   </div>
   <div class="ui segment">
     {{! BEGIN-SNIPPET range }}
-<div class="ui form">
-  <div class="two fields">
-    <div class="field">
-      <label>Start date</label>
-      {{ui-calendar type="date" endDate=endDate date=startDate onChange=(action (mut startDate)) placeholder="Start date"}}
-    </div>
+    <div class="ui form">
+      <div class="two fields">
+        <div class="field">
+          <label>Start date</label>
+          {{ui-calendar
+            type="date"
+            endDate=endDate
+            date=startDate
+            onChange=(action (mut startDate))
+            placeholder="Start date"
+          }}
+        </div>
 
-    <div class="field">
-      <label>End date</label>
-      {{ui-calendar type="date" startDate=startDate date=endDate onChange=(action (mut endDate)) placeholder="End date"}}
+        <div class="field">
+          <label>End date</label>
+          {{ui-calendar
+            type="date"
+            startDate=startDate
+            date=endDate
+            onChange=(action (mut endDate))
+            placeholder="End date"
+          }}
+        </div>
+      </div>
     </div>
-  </div>
-</div>
     {{! END-SNIPPET range }}
   </div>
   <div class="ui secondary segment">

@@ -30,7 +30,7 @@ UiCalendarMoment.reopen({
     merge(settings, {
       onChange(date) {
         // Wraps the Date in a moment object an triggers the onChange action
-        this.sendAction('onChange', date ? moment(date) : null);
+        this.get('onChange')(date ? moment(date) : null);
       }
     });
   }

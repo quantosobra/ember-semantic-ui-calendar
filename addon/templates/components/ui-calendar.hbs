@@ -2,12 +2,13 @@
   {{#if icon}}
     <i class="left {{icon}} icon"></i>
   {{/if}}
-  {{input type="text"
-    placeholder=placeholder
-    key-down=(action "onInputKeyDown")
-    focus-in=onFocusIn
-    focus-out=onFocusOut
-  }}
+  <input
+    type="text"
+    placeholder={{placeholder}}
+    onkeydown={{action "handleInputKeyDown"}}
+    onfocus={{action "handleInputFocus"}}
+    onblur={{action "handleInputBlur"}}
+  >
   {{#if showClearButton}}
     <i class="right {{clearIcon}} link icon" {{action "execute" "clear"}}></i>
   {{/if}}
