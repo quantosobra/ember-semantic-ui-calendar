@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-calendar</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v1.0.1
+        API Docs for: v2.0.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -77,6 +77,7 @@
               import { computed } from &#x27;@ember/object&#x27;;
               import { isEmpty } from &#x27;@ember/utils&#x27;;
               import Base from &#x27;semantic-ui-ember/mixins/base&#x27;;
+              import { invokeAction } from &#x27;ember-invoke-action&#x27;;
               import layout from &#x27;../templates/components/ui-calendar&#x27;;
               
               /**
@@ -198,7 +199,8 @@
                 /**
                  * Action executed when the date input is focused.
                  *
-                 * @event onFocusOut
+                 * @event onFocusIn
+                 * @param {Event} event
                  */
                 onFocusIn: null,
               
@@ -206,6 +208,7 @@
                  * Action executed when the date input looses focus.
                  *
                  * @event onFocusOut
+                 * @param {Event} event
                  */
                 onFocusOut: null,
               
@@ -224,15 +227,23 @@
                 },
               
                 actions: {
-                  onInputKeyDown(value, event) {
-                    this.sendAction(&#x27;onKeyDown&#x27;, event);
+                  handleInputFocus(event) {
+                    invokeAction(this, &#x27;onFocusIn&#x27;, event);
+                  },
+              
+                  handleInputBlur(event) {
+                    invokeAction(this, &#x27;onFocusOut&#x27;, event);
+                  },
+              
+                  handleInputKeyDown(event) {
+                    invokeAction(this, &#x27;onKeyDown&#x27;, event);
               
                     switch (event.keyCode) {
                       case 13:
-                        this.sendAction(&#x27;onEnter&#x27;, event);
+                        invokeAction(this, &#x27;onEnter&#x27;, event);
                         break;
                       case 27:
-                        this.sendAction(&#x27;onEscape&#x27;, event);
+                        invokeAction(this, &#x27;onEscape&#x27;, event);
                         break;
                     }
                   }
