@@ -5854,14 +5854,20 @@ is-glob@^4.0.0:
   dependencies:
     is-extglob "^2.1.1"
 
+is-my-ip-valid@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/is-my-ip-valid/-/is-my-ip-valid-1.0.0.tgz#7b351b8e8edd4d3995d4d066680e664d94696824"
+  integrity sha512-gmh/eWXROncUzRnIa1Ubrt5b8ep/MGSnfAUI3aRp+sqTCs1tv1Isl8d8F6JmkN3dXKc3ehZMrtiPN9eL03NuaQ==
+
 is-my-json-valid@^2.12.3:
-  version "2.12.3"
-  resolved "https://registry.yarnpkg.com/is-my-json-valid/-/is-my-json-valid-2.12.3.tgz#5a39d1d76b2dbb83140bbd157b1d5ee4bdc85ad6"
-  integrity sha1-WjnR12stu4MUC70Vex1e5L3IWtY=
+  version "2.19.0"
+  resolved "https://registry.yarnpkg.com/is-my-json-valid/-/is-my-json-valid-2.19.0.tgz#8fd6e40363cd06b963fa877d444bfb5eddc62175"
+  integrity sha512-mG0f/unGX1HZ5ep4uhRaPOS8EkAY8/j6mDRMJrutq4CqhoJWYp7qAlonIPy3TV7p3ju4TK9fo/PbnoksWmsp5Q==
   dependencies:
     generate-function "^2.0.0"
     generate-object-property "^1.1.0"
-    jsonpointer "2.0.0"
+    is-my-ip-valid "^1.0.0"
+    jsonpointer "^4.0.0"
     xtend "^4.0.0"
 
 is-number@^3.0.0:
@@ -6217,10 +6223,10 @@ jsonify@~0.0.0:
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
   integrity sha1-LHS27kHZPKUbe1qu6PUDYx0lKnM=
 
-jsonpointer@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/jsonpointer/-/jsonpointer-2.0.0.tgz#3af1dd20fe85463910d469a385e33017d2a030d9"
-  integrity sha1-OvHdIP6FRjkQ1GmjheMwF9KgMNk=
+jsonpointer@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/jsonpointer/-/jsonpointer-4.0.1.tgz#4fd92cb34e0e9db3c89c8622ecf51f9b978c6cb9"
+  integrity sha1-T9kss04OnbPInIYi7PUfm5eMbLk=
 
 jsprim@^1.2.2:
   version "1.2.2"
