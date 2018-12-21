@@ -3518,6 +3518,16 @@ ember-cli-github-pages@0.2.1:
     heimdalljs-logger "^0.1.9"
     silent-error "^1.1.0"
 
+ember-cli-htmlbars@^2.0.3:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-2.0.5.tgz#b5a105429a6bce4f7c9c97b667e3b8926e31397f"
+  integrity sha512-3f3PAxdnQ/fhQa8XP/3z4RLRgLHxV8j4Ln75aHbRdemOCjBa048KxL9l+acRLhCulbGQCMnLiIUIC89PAzLrcA==
+  dependencies:
+    broccoli-persistent-filter "^1.4.3"
+    hash-for-dep "^1.2.3"
+    json-stable-stringify "^1.0.0"
+    strip-bom "^3.0.0"
+
 ember-cli-htmlbars@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/ember-cli-htmlbars/-/ember-cli-htmlbars-3.0.1.tgz#01e21f0fd05e0a6489154f26614b1041769e3e58"
@@ -9046,11 +9056,12 @@ semantic-ui-css@^2.2.14:
     jquery x.*
 
 semantic-ui-ember@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/semantic-ui-ember/-/semantic-ui-ember-3.0.0.tgz#1c0cd1da83a0630dcce47e14e0ab25fcd9e454d9"
-  integrity sha512-9RelnyGPJEkM7ZjvFIn3HtxE93meFHLd3JVTfQLbPgROJCZJ5YIM7evytjBP+Xf7HaoyOLG0fSotllsrKmdLzQ==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/semantic-ui-ember/-/semantic-ui-ember-3.0.3.tgz#0ac08960cada66d7b4ef0eb7529fe082c8f2031f"
+  integrity sha512-SiByL++MXt4nxE5/zJhqZ+4oF2HWIyL1/7r8RpvHwEZ0l96r/4SuGq/n6Ukh2PLziKfM0YVAygau9GuDM4K9RQ==
   dependencies:
     ember-cli-babel "^6.11.0"
+    ember-cli-htmlbars "^2.0.3"
     ember-promise-utils "^0.1.1"
     ember-runtime-enumerable-includes-polyfill "2.0.0"
     semantic-ui-css "^2.2.14"
