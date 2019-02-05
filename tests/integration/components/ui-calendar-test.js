@@ -193,4 +193,40 @@ module('Integration | Component | ui calendar', function(hooks) {
     focus('input');
     blur('input');
   });
+
+  test('it triggers custom action - onChange', async function(assert) {
+    assert.expect(1);
+
+    this.set('change',() => assert.ok(true));
+
+    await render(hbs`
+      {{#ui-calendar type="date" onChange=(action change)}}
+        <button class="ui button">Select Date</button>
+      {{/ui-calendar}}
+    `);
+
+    await click('.ui.calendar .ui.button');
+    await click('.link.today');
+  });
+
+  test('it execute custom action - execute clear', async function(assert) {
+    assert.expect(1);
+
+    this.set('change', (date) => {
+      this.set('date', date);
+    });
+
+    await render(hbs`
+      {{#ui-calendar type="date" onChange=(action change) date=date as |execute|}}
+        <input/>
+        <button class="ui button" {{action execute "clear"}}>Clear Date</button>
+      {{/ui-calendar}}
+    `);
+
+    focus('input');
+    await click('.link.today');
+    await click('.ui.calendar .ui.button');
+
+    assert.notOk(this.get('date'), 'date should be empty');
+  });
 });
