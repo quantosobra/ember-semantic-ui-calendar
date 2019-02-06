@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0 (2019-02-06)
+
+* [[#58](https://github.com/quantosobra/ember-semantic-ui-calendar/pull/58)] Add support for custom calendar trigger
+
 ## 2.0.0 (2018-12-05)
 
 * [[#7](https://github.com/quantosobra/ember-semantic-ui-calendar/pull/17)] Update Ember CLI
