@@ -194,10 +194,10 @@ module('Integration | Component | ui calendar', function(hooks) {
     blur('input');
   });
 
-  test('it triggers custom action - onChange', async function(assert) {
+  test('it works with custom trigger', async function(assert) {
     assert.expect(1);
 
-    this.set('change',() => assert.ok(true));
+    this.set('change', () => assert.ok(true));
 
     await render(hbs`
       {{#ui-calendar type="date" onChange=(action change)}}
@@ -209,7 +209,7 @@ module('Integration | Component | ui calendar', function(hooks) {
     await click('.link.today');
   });
 
-  test('it execute custom action - execute clear', async function(assert) {
+  test('a custom trigger can execute module behaviors', async function(assert) {
     assert.expect(1);
 
     this.set('change', (date) => {
