@@ -3,7 +3,7 @@
         "name": "ember-semantic-ui-calendar",
         "description": "Semantic UI Calendar component for Ember.",
         "url": "http://github.com/quantosobra/ember-semantic-ui-calendar",
-        "version": "v2.0.0"
+        "version": "v2.1.0"
     },
     "files": {
         "addon/components/ui-calendar.js": {
