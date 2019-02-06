@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('moment-examples');
   this.route('clear-button-examples');
   this.route('range-examples');
-  this.route('custom-actions-examples');
+  this.route('custom-trigger-examples');
 });
 
 export default Router;
