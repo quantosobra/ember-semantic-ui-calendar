@@ -1,15 +1,19 @@
-<div class="ui input {{inputIconsClassNames}}">
-  {{#if icon}}
-    <i class="left {{icon}} icon"></i>
-  {{/if}}
-  <input
-    type="text"
-    placeholder={{placeholder}}
-    onkeydown={{action "handleInputKeyDown"}}
-    onfocus={{action "handleInputFocus"}}
-    onblur={{action "handleInputBlur"}}
-  >
-  {{#if showClearButton}}
-    <i class="right {{clearIcon}} link icon" {{action "execute" "clear"}}></i>
-  {{/if}}
-</div>
+{{#if hasBlock}}
+  {{yield (action "execute")}}
+{{else}}
+  <div class="ui input {{inputIconsClassNames}}">
+    {{#if icon}}
+      <i class="left {{icon}} icon"></i>
+    {{/if}}
+    <input
+      type="text"
+      placeholder={{placeholder}}
+      onkeydown={{action "handleInputKeyDown"}}
+      onfocus={{action "handleInputFocus"}}
+      onblur={{action "handleInputBlur"}}
+    >
+    {{#if showClearButton}}
+      <i class="right {{clearIcon}} link icon" {{action "execute" "clear"}}></i>
+    {{/if}}
+  </div>
+{{/if}}
