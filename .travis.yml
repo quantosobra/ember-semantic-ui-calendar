@@ -20,9 +20,9 @@ env:
     - JOBS=1
 
   matrix:
-    - EMBER_TRY_SCENARIO=ember-lts-2.16
     - EMBER_TRY_SCENARIO=ember-lts-2.18
     - EMBER_TRY_SCENARIO=ember-lts-3.4
+    - EMBER_TRY_SCENARIO=ember-lts-3.8
     - EMBER_TRY_SCENARIO=ember-release
     - EMBER_TRY_SCENARIO=ember-beta
     - EMBER_TRY_SCENARIO=ember-canary
@@ -37,8 +37,8 @@ install:
   - yarn install --non-interactive
 
 script:
-  - npm run lint:js
-  - npm run lint:hbs
+  - yarn run lint:js
+  - yarn run lint:hbs
   # Usually, it's ok to finish the test scenario without reverting
   #  to the addon's original dependency state, skipping "cleanup".
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup

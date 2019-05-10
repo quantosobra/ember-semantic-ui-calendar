@@ -10,6 +10,11 @@
 
 This addon integrates [Semantic UI Calendar](https://github.com/mdehoog/Semantic-UI-Calendar) into Ember.
 
+## Compatibility
+
+* Ember.js v2.18 or above
+* Ember CLI v2.13 or above
+
 ## Installation
 
 ```
@@ -44,4 +49,4 @@ yarn publish
 This project is developed at [QuantoSobra](https://www.quantosobra.com.br) and licensed under the MIT license.
 See the [LICENSE.md](LICENSE.md) file for the full license text.
 
-QuantoSobra &copy; 2017
+QuantoSobra &copy; 2017-2019
