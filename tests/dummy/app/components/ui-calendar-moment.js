@@ -47,7 +47,7 @@ UiCalendarMoment.reopen({
     this.get('moment').on('localeChanged', () => this.momentLocaleChanged());
   },
 
-  localizedText: computed(function() {
+  localizedText: computed('moment.locale', function() {
     return {
       days: moment.weekdaysMin(),
       months: moment.months(),
@@ -55,7 +55,7 @@ UiCalendarMoment.reopen({
       // You can also add translations for `today` and `now` here, using an
       // addon like ember-i18n or ember-intl.
     };
-  }).volatile(),
+  }),
 
   momentLocaleChanged() {
     // Update translations
