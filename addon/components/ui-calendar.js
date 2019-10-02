@@ -142,7 +142,7 @@ export default Component.extend(Base, {
 
     let date = this.get('date');
     if (date) {
-      this.$().calendar('set date', date);
+      this.element.addEventListener('set date', date);
     }
   },
 

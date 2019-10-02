@@ -1,7 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render, find, findAll, click, triggerKeyEvent } from '@ember/test-helpers';
-import { focus, blur } from 'ember-native-dom-helpers';
+import { render, find, findAll, click, triggerKeyEvent, focus, blur } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | ui calendar', function(hooks) {
